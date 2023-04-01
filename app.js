@@ -39,10 +39,6 @@ app.get("/test-ejs2", (req, res) => {
 });
 
 //7
-app.post("/showPost", (req, res) => {
-  res.render("index3");
-  console.log(req.body);
-});
 
 app.get("/showPost2", (req, res) => {
   res.render("index3");
@@ -52,6 +48,11 @@ app.post("/showPost2", (req, res) => {
   const inputFirst = req.body.first;
   const inputLast = req.body.last;
   res.render("submit", { myfirst: inputFirst, mylast: inputLast });
+});
+
+app.post("/posting", (req, res) => {
+  res.render("index3");
+  console.log(req.body);
 });
 
 //8
